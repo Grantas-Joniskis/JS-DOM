@@ -2,9 +2,20 @@
     "books": [
         {
             "id": 1,
-            "Author": "J.K Rowling",
-            "Book": "Harry Potter",
-            "Rating": "4.5"
+            "author": "J.K Rowling",
+            "book": "Harry Potter",
+            "rating": "4.5"
+        },
+        {
+            "id": 2,
+            "author": "Ashlee Vance",
+            "book": "Elon Musk",
+            "rating": "4.0"
+        }, {
+            "id": 3,
+            "author": "Nostradamus",
+            "book": "Prophecies",
+            "rating": "4.0"
         }
     ]
 }

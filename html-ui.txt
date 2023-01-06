@@ -1,4 +1,4 @@
-    <div class="d-flex">
+    <div class="js-container d-flex">
         <div class="col-8 pt-2 ps-3">
             <table class="table table-dark stripped text-center">
                 <thead>

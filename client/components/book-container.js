@@ -11,7 +11,7 @@ export class BookContainer {
 
     createContainer() {
         const bodyElement = document.querySelector('body');
-        bodyElement.innerHTML += `<div class="js-container d-flex"></div>`;
+        bodyElement.innerHTML += `<div class="js-container d-flex">`;
     }
 }
 
