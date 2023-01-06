@@ -1,0 +1,10 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "Author": "J.K Rowling",
+            "Book": "Harry Potter",
+            "Rating": "4.5"
+        }
+    ]
+}
