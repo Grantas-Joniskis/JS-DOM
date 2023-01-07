@@ -20,7 +20,8 @@ export class ApiService {
         const response = await fetch(`${this.#serverAddress}/books`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify({
                 author,

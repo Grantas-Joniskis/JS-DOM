@@ -27,19 +27,28 @@ export class BookTable {
         </div>`;
     }
 
+    updateTable(tableData) {
+        const tbody = document.querySelector('.js-table tbody');
+        tbody.innerHTML += this.#createRow(tableData);
+    }
+
+    #createRow({author, book, rating}) {
+        return `<tr>
+        <td>${author}</td>
+        <td>${book}</td>
+        <td>${rating}</td>
+        <td>
+            <button class="btn btn-warning">🖊️</button>
+            <button class="btn btn-danger">🗙</button>
+        </td>
+    </tr>`;
+    }
+
     #createRows(tableData) {
         if(tableData.length === 0) return '';
         let str = '';
-        tableData.map(({author, book, rating}) => {
-            str += `<tr>
-                <td>${author}</td>
-                <td>${book}</td>
-                <td>${rating}</td>
-                <td>
-                    <button class="btn btn-warning">🖊️</button>
-                    <button class="btn btn-danger">🗙</button>
-                </td>
-            </tr>`;
+        tableData.map((data) => {
+            str += this.#createRow(data);
         });
         return str;
     }
