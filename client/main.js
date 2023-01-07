@@ -9,8 +9,12 @@ import { BookForm } from "./components/book-form.js";
     const bookTable = new BookTable();
     const bookForm = new BookForm();
 
-    const books = await apiService.getBooks();
-    bookContainer.createContainer();
-    bookTable.createTable(books);
-    bookForm.createForm();
+    try {
+        const books = await apiService.getBooks();
+        bookContainer.createContainer();
+        bookTable.initTable(books);
+        bookForm.initForm();
+    } catch(error) {
+        console.error(error);
+    }
 })();

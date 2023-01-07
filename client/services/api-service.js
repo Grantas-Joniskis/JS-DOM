@@ -13,7 +13,21 @@ export class ApiService {
         const response = await fetch(`${this.#serverAddress}/books`);
         const books = await response.json();
 
-        console.log(books)
         return books;
+    }
+
+    async postBook({author, book, rating}) {
+        const response = await fetch(`${this.#serverAddress}/books`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                author,
+                book,
+                rating
+            })
+        });
+        return response;
     }
 }

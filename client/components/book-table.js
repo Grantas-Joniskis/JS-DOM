@@ -9,7 +9,7 @@ export class BookTable {
         return BookTable.instance;
     }
 
-    createTable(tableData) {
+    initTable(tableData) {
         const container = document.querySelector('.js-container');
         container.innerHTML += 
         `<div class="js-table-container col-8 pt-2 ps-3">
