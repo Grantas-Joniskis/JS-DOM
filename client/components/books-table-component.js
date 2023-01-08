@@ -46,7 +46,7 @@ class BooksTableComponent {
     deleteButton.addEventListener('click', () => this.onDelete(id));
 
     const updateButton = tr.querySelector('.btn-warning');
-    updateButton.addEventListener('click', () => this.onEdit(book));
+    updateButton.addEventListener('click', () => this.onEdit(bookVal));
 
     return tr;
   }

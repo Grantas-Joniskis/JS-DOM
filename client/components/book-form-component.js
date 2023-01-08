@@ -64,7 +64,7 @@ class BookFormComponent {
   disableEditing = () => {
     this.htmlElement.reset();
     this.formNameElement.innerText = 'Create Book';
-    this.submitButton.innerText = 'Update Book';
+    this.submitButton.innerText = 'Create Book';
     this.submitButton.className = 'btn btn-success w-100';
   }
 }
