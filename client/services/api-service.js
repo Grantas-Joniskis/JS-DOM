@@ -1,34 +1,54 @@
-export class ApiService {
+const serverAddress = 'http://localhost:3000';
 
-    #serverAddress = 'http://localhost:3000';
-    static instance;
+const getBooks = async () => {
+  const response = await fetch(`${serverAddress}/books`);
+  const books = await response.json();
 
-    constructor() {
-        if(!ApiService.instance) {
-            ApiService.instance = this;
-        }
-    }
-
-    async getBooks () {
-        const response = await fetch(`${this.#serverAddress}/books`);
-        const books = await response.json();
-
-        return books;
-    }
-
-    async postBook({author, book, rating}) {
-        const response = await fetch(`${this.#serverAddress}/books`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                author,
-                book,
-                rating
-            })
-        });
-        return response;
-    }
+  return books;
 }
+
+const deleteBook = async (id) => {
+  const response = await fetch(`${serverAddress}/books/${id}`, {
+    method: 'DELETE'
+  });
+  const books = await response.json();
+
+  return books;
+}
+
+const createBook = async (bookProps) => {
+  const response = await fetch(`${serverAddress}/books`, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+      "accept": "application/json"
+    },
+    body: JSON.stringify(bookProps)
+  });
+  const books = await response.json();
+
+  return books;
+}
+
+const updateBook = async (id, bookProps) => {
+  const response = await fetch(`${serverAddress}/books/${id}`, {
+    method: 'PATCH',
+    headers: {
+      "Content-Type": "application/json",
+      "accept": "application/json"
+    },
+    body: JSON.stringify(bookProps)
+  });
+  const books = await response.json();
+
+  return books;
+}
+
+const ApiService = {
+  getBooks: getBooks,
+  deleteBook: deleteBook,
+  createBook: createBook,
+  updateBook: updateBook,
+};
+
+export default ApiService;
