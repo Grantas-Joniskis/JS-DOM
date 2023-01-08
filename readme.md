@@ -15,4 +15,4 @@ Open CLI and run:
   npm run server
 ```
 ## Project Demo
-![](https://github.com/Grantas-Joniskis/JS-DOM/../../../../projectgif.gif)
+![](https://github.com/Grantas-Joniskis/JS-DOM/blob/master/projectgif.gif)
