@@ -7,7 +7,7 @@ class BooksTableComponent {
 
   constructor({ books, onDelete, onEdit }) {
     this.htmlElement = document.createElement('table');
-    this.htmlElement.className = 'table table-striped table-dark';
+    this.htmlElement.className = 'table table-striped';
     this.htmlElement.innerHTML = ` 
     <thead class="bg-dark text-white">
     <tr>
