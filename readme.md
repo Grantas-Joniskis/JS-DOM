@@ -15,4 +15,4 @@ Open CLI and run:
   npm run server
 ```
 ## Project Demo
-(projectgif.gif)
+(/projectgif.gif)
