@@ -9,7 +9,7 @@ class BookFormComponent {
 
   constructor({ onSubmit }) {
     this.htmlElement = document.createElement('form');
-    this.htmlElement.className = 'shadow p-3';
+    this.htmlElement.className = 'shadow border border-dark p-3 col-3';
     this.htmlElement.innerHTML = `
       <h2 class="h5 text-center">Add Book To List</h2>
       <div class="mb-3">
@@ -55,7 +55,7 @@ class BookFormComponent {
   enableEditing = ({ author, book, rating }) => {
     this.titleInput.value = author;
     this.yearInput.value = book;
-    this.damagedInput.checked = rating;
+    this.damagedInput.value = rating;
     this.formNameElement.innerText = 'Update Book';
     this.submitButton.innerText = 'Update Book';
     this.submitButton.className = 'btn btn-warning w-100';
@@ -63,9 +63,9 @@ class BookFormComponent {
 
   disableEditing = () => {
     this.htmlElement.reset();
-    this.formNameElement.innerText = 'Create Book';
-    this.submitButton.innerText = 'Create Book';
-    this.submitButton.className = 'btn btn-success w-100';
+    this.formNameElement.innerText = 'Add Book';
+    this.submitButton.innerText = 'Add Book';
+    this.submitButton.className = 'btn btn-danger w-100';
   }
 }
 
