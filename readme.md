@@ -1,5 +1,8 @@
 # Fullstack CRUD application
 
+## Project Demo
+![](https://github.com/Grantas-Joniskis/JS-DOM/blob/master/projectgif.gif)
+
 ## Required Programs
   * Node v16.x.y or higher
 
@@ -14,5 +17,3 @@ Open CLI and run:
 ```
   npm run server
 ```
-## Project Demo
-![](https://github.com/Grantas-Joniskis/JS-DOM/blob/master/projectgif.gif)
